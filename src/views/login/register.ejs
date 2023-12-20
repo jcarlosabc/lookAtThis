@@ -1,0 +1,61 @@
+<%- include ('../partials/personalizada/headers.ejs')%> 
+
+    <!-- Register -->
+    <section class="w3l-workinghny-form">
+        <!-- /form -->
+        <div class="workinghny-form-grid">
+            <div class="wrapper">
+                <div class="logo" style="margin-bottom: -145px; margin-top: -130px;" >
+                   
+                    <a class="brand-logo" href="#index.html">
+                        <img src="../img/Logos/logoOficial/logo-lookAtThis.webp" alt="Your logo" title="Your logo" style="width: 80%;" />
+                    </a> 
+                </div>
+                <div class="workinghny-block-grid">
+                   <!--  <div class="form-right-inf">
+                       <h2>Login </h2>
+                        <div class="social-media">
+                            <a href="#facebook" class="fb"><span class="fab fa-facebook" aria-hidden="true"></span> Login with facebok</a>
+                             <a href="#twitter" class="tw"><span class="fab fa-twitter" aria-hidden="true"></span> Login with twitter</a> 
+                        </div>-->
+                        <div class="login-form-content">
+                            <h2>Registrarse</h2>
+                            <form action="/registrar_usuario" class="signin-form" method="post">
+                                <div class="one-frm">
+                                    <input type="text" name="nombres" placeholder="Nombres" required="" autofocus>
+                                </div>
+                                <div class="one-frm">
+                                    <input type="text" name="apellidos" placeholder="Apellidos" required="">
+                                </div>
+                                <div class="one-frm">
+                                    <input type="email" name="correo" placeholder="Correo" required="" autofocus>
+                                </div>
+                                <div class="one-frm">
+                                    <input type="password" name="clave" placeholder="Contraseña" required="">
+                                </div>
+                                <label class="check-remaind">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p class="remember">Recuerdame</p>
+
+                                </label>
+                                <button class="btn btn-style mt-3">Registrar </button>
+                                
+                                <p class="already">Si ya tienes Cuenta <a href="/login">Ingresa Aqui</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!--copyright-->
+        <!-- <div class="copyright text-center">
+            <div class="wrapper">
+                <p class="copy-footer-29">© 2020 Flat lay login form. All rights reserved | Design by Los wawawa </p>
+            </div>
+        </div> -->
+        <!-- copyright-->
+    </section>   
+     
+<%- include ('../partials/personalizada/footer.ejs')%> 

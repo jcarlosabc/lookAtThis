@@ -1,0 +1,18 @@
+
+<% include ('../partials/personalizada/headers.ejs')%> // llamar al header y footer
+
+
+//el Rbg con gradiante del logo
+background: rgb(231,64,18);
+background: linear-gradient(90deg, rgba(231,64,18,1) 0%, rgba(37,96,41,1) 50%, rgba(3,108,94,1) 100%);
+
+
+
+
+//ocultar
+<script>
+        function mostrarBoton() {
+            $('#prueba').css("display","none")
+            $('#publicacion').removeClass("textArea")
+        }
+    </script>

@@ -1,0 +1,55 @@
+<%- include ('../partials/personalizada/headers.ejs')%> 
+
+ <!-- Login -->
+ <section class="w3l-workinghny-form">
+    <!-- /form -->
+    <div class="workinghny-form-grid">
+        <div class="wrapper">
+            <div class="logo" style="margin-bottom: -145px; margin-top: -130px;" >
+                   
+                <a class="brand-logo" href="#index.html">
+                    <img src="../img/Logos/logoOficial/logo-lookAtThis.webp" alt="Your logo" title="Your logo" style="width: 80%;" />
+                </a> 
+            </div>
+            <div class="workinghny-block-grid">
+                <div class="form-right-inf">
+                    
+                    <div class="login-form-content">
+                        <h2>Ingresar</h2>
+                        <form action="/login" class="signin-form" method="post">                            
+                            <div class="one-frm">
+                                <input type="email" name="correo" placeholder="Correo" required="" autofocus>
+                            </div>
+                            <div class="one-frm">
+                                <input type="password" name="clave" placeholder="contraseña" required="">
+                            </div>
+                            <label class="check-remaind">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <p class="remember">Recuerdame</p>
+
+                            </label>
+                            <button type="submit" class="btn btn-style mt-3">Iniciar </button>
+
+                    <h2 style="margin-top: 15%;">Ingresar con Correo Electronico </h2>
+                    <div class="social-media">
+                        <a href="#facebook" class="fb"><span class="fab fa-facebook" aria-hidden="true"></span> Ingresar con Facebok</a>
+                        <a href="#twitter" class="tw"><span class="fab fa-google" aria-hidden="true"></span> Ingresar con Google</a>
+                    </div>
+                            <p class="already">¿No tienes una cuenta? <a href="/register">Registrarse</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- form -->
+    <!-- copyright-->
+    <!-- <div class="copyright text-center">
+        <div class="wrapper">
+            <p class="copy-footer-29">© 2020 Flat lay login form. All rights reserved | Design by Los wawawa </p>
+        </div>
+    </div> -->
+    <!-- copyright-->
+</section>
+<%- include ('../partials/personalizada/footer.ejs')%> 

@@ -1,0 +1,29 @@
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <!-- Template JavaScript -->
+     <script src="../js/theme-change.js"></script>
+     <!-- disable body scroll which navbar is in active -->
+     <script>
+         $(function () {
+             $('.navbar-toggler').click(function () {
+                 $('body').toggleClass('noscroll');
+             })
+         });
+     </script>
+         <% if(alert) {%>
+            <script>
+                Swal.fire({
+                    title: '<%= alertTitle %>',
+                    text: '<%= alertMessage %>',
+                    icon:'<%= alertIcon%>',
+                    showConfirmButton:'<%= showConfirmButton %>',
+                    timer: false
+                }).then(() => {
+                    window.location = '/<%= ruta%>'
+                })
+            </script>
+        <%}%>
+</body>
+</html>

@@ -1,0 +1,103 @@
+ <!-- header -->
+ <header class="w3l-header">
+    <!--/nav-->
+    <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+               <!-- <span class="fa fa-grav"></span> -->
+               <img style="width: 150px;" src="../img/Logos/logoOficial/logo-lookAtThis.webp" alt=""> 
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa icon-expand fa-bars"></span>
+                <span class="fa icon-close fa-times"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown @@category__active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categories <span class="fa fa-angle-down"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item @@ls__active" href="/lifestyle">Lifestyle posts</a>
+                            <a class="dropdown-item @@cp__active" href="/culture">Culture posts</a>
+                        </div>
+                    </li>
+                    <li class="nav-item @@contact__active">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+
+                <!--/search-right-->
+                <div class="search-right mt-lg-0 mt-2">
+                    <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
+                    <!-- search popup -->
+                    <div id="search" class="pop-overlay">
+                        <div class="popup">
+                            <h3 class="hny-title two">Search here</h3>
+                            <form action="#" method="Get" class="search-box">
+                                <input type="search" placeholder="Search for blog posts" name="search"
+                                    required="required" autofocus="">
+                                <button type="submit" class="btn">Search</button>
+                            </form>
+                            <a class="close" href="#close">×</a>
+                        </div>
+                    </div>
+                    <!-- /search popup -->
+                </div>
+                <!--search-right-->
+
+                <!-- author -->               
+            <ul class="navbar-nav">            
+                <div class="dropdown" style="margin-left: 10px;">
+                    
+                    <button class="btn btn-secondary dropdown-toggle" style="border-radius: 31px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="header-author d-flex pl-2 mt-lg-0 mt-3">
+                            <a class="img-circle img-circle-sm" href="#author">
+                                <img src="../img/author.jpg" class="img-fluid" alt="...">
+                            </a>
+                            <div class="align-self ml-3">
+                                <a href="#author">
+                                    <h5><%= nombre_apellido%></h5>
+                                    <span>Blog Writer </span><span class="fa fa-angle-down"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Configurar perfil</a>
+                      <a class="dropdown-item" href="/logout">Cerrar sesión</a>
+                    </div>
+                    
+                </div>  
+            </ul> 
+                <!-- author--> 
+        
+            </div>
+
+            <!-- toggle switch for light and dark theme -->
+            <div class="mobile-position">
+                <nav class="navigation">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox">
+                            <div class="mode-container">
+                                <i class="gg-sun"></i>
+                                <i class="gg-moon"></i>
+                            </div>
+                        </label>
+                    </div>
+                </nav>
+            </div>
+            <!-- toggle switch for light and dark theme -->
+        </div>
+    </nav>
+    <!--nav-->
+</header>
