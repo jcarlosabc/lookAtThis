@@ -30,6 +30,12 @@ exports.registrando_usuario = async(req,res)=>{
                     }
                 } else {
                     const { nombres, apellidos, correo, clave } = req.body //llamando el contenido del formulario
+                    //const salt ="80zzm081sr@nd0m";
+                    //const passHash = createHash("sha256")
+                    //.update(password)
+                    //.update(createHash("sha256").update(salt, "utf8").digest("hex"))
+                   // .digest("hex");
+                
                     const passHash = await hashear.hash(clave,12) //hash para encryptar las constraseñas
                     const registroData = {nombres:nombres, apellidos: apellidos, correo:correo, clave:passHash} // Enpaquetando la info
                     const usuarioData = {correo:correo, clave:passHash}

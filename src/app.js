@@ -51,6 +51,8 @@ app.use((req, res, next) => {
 //llamar al routes
 app.use('/', require('./routes/ruta_principal'));
 app.use('/', require('./routes/session'));
+app.use('/', require('./routes/publicaciones'));
+
 
 // Configuraciones
 app.set('port' , port);

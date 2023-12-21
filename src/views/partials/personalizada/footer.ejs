@@ -2,6 +2,10 @@
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
      <!-- Template JavaScript -->
      <script src="../js/theme-change.js"></script>
      <!-- disable body scroll which navbar is in active -->
@@ -9,8 +13,10 @@
          $(function () {
              $('.navbar-toggler').click(function () {
                  $('body').toggleClass('noscroll');
+                 
              })
          });
+         
      </script>
          <% if(alert) {%>
             <script>
@@ -25,5 +31,50 @@
                 })
             </script>
         <%}%>
+     <!-- disable body scroll which navbar is in active -->
+
+ <!-- boton de likes --> 
+ <script>
+    function saveLike(publicationId, index) {
+      let count = document.querySelector("#count" + index);
+      let likeBtn = document.querySelector("#likeBtn" + index);
+      let clicked = likeBtn.dataset.clicked === 'true' || false;
+  
+      if (!clicked) {
+        clicked = true;
+        count.textContent++;
+        console.log("Liked publication with ID: " + publicationId);
+      } else {
+        clicked = false;
+        count.textContent--;
+        console.log("Unliked publication with ID: " + publicationId);
+      }
+  
+      likeBtn.dataset.clicked = clicked;
+    }
+  </script>
+ <!-- boton de likes --> 
+ <script>
+    function saveLike() {
+        let like = 1
+        let id_Publicacion = document.getElementById("id_Publicacion").value
+        fetch("/save_like",{
+            method:"POST",
+            body: JSON.stringify({like, id_Publicacion}),
+            headers:{"Content-Type":"application/json"}
+        }).then(res => res.json())
+            .catch(error => console.error("error:",error))
+            .then(response => {
+                if (response) {
+                    console.log("se dio like")
+                } else {
+                    console.log("no se dio like")
+                }
+            })
+
+   }
+</script>
+ 
+    
 </body>
 </html>

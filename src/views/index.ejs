@@ -2,20 +2,21 @@
 <%- include ('./partials/generales/nav.ejs')%> 
 
     <div class="w3l-homeblock1 py-5">
+
     <center>
-        <div class="input-group input-group-lg" id="publicar">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+        <form action="/nueva_publicacion" method="post">
+            <div class="input-group input-group-lg" id="publicar">
+                <input  name="titulo" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="¿Que Piensas?" onclick="mostrar_campo()">
             </div>
-            <input  type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="¿Que Piensas?" onclick="mostrar_campo()">
-        </div>
-        <form method="post">
-            <textarea name="publiText" id="publitext" cols="55"  rows="10" style="display: none;"></textarea>
+            <div class="input-group input-group-lg" id="publicar">
+                <textarea name="publiText"  cols="95"  rows="5" ></textarea>
+                <div class="input-group-prepend">
+                    <input type="submit" value="Publicar">
+                </div>
+            </div>
         </form>
     </center>
 
-    <input type="hidden" id="like" value="1">
-    <button type="button" id="saveLike">Like</button>
 
         <div class="container pt-lg-5 pt-md-4">
             <!-- block -->
